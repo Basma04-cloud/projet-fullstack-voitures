@@ -1,0 +1,21 @@
+body {
+  background-color: #272B30;
+}
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ai-response {
+  background: #1a1a2e;
+  border: 1px solid #4a4a8a;
+  border-radius: 8px;
+  padding: 16px;
+  color: #e0e0ff;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.ai-loading {
+  color: #8888cc;
+  font-style: italic;
+}

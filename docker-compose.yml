@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+
+  # ─────────────── Base de données PostgreSQL ───────────────
+  postgresdb:
+    container_name: postgresdb
+    image: postgres:15
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: springboot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 15/08Lionelmokhtar
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - spring-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─────────────── Application Spring Boot ───────────────
+  springboot-app:
+    container_name: springboot-app
+    build: ./backend
+    restart: on-failure
+    ports:
+      - "9090:8081"
+    environment:
+      DB_HOST: postgresdb
+      DB_PORT: 5432
+      DB_NAME: springboot
+      DB_USER: postgres
+      DB_PASSWORD: 15/08Lionelmokhtar
+      # Ollama tourne sur l'hôte (pas dans Docker)
+      SPRING_AI_OLLAMA_BASE_URL: http://host.docker.internal:11434
+    depends_on:
+      postgresdb:
+        condition: service_healthy
+    networks:
+      - spring-net
+
+volumes:
+  pgdata:
+
+networks:
+  spring-net:
+    driver: bridge
