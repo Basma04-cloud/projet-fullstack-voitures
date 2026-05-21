@@ -1,4 +1,4 @@
-# 🚗 Projet Full Stack — Magasin de Voitures avec IA
+#  Projet Full Stack — Magasin de Voitures avec IA
 
 **Étudiant :** Master MIOLA — ENSIAS  
 **Encadrant :** Pr. Khalid Nafil  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 projet-fullstack/
@@ -37,7 +37,7 @@ projet-fullstack/
 
 ---
 
-## 🚀 Méthode 1 — Lancement avec Docker Compose (recommandé)
+##  Méthode 1 — Lancement avec Docker Compose (recommandé)
 
 ### Prérequis
 - Docker Desktop installé et démarré
