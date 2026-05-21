@@ -1,8 +1,8 @@
 #  Projet Full Stack — Magasin de Voitures avec IA
 
-**Étudiant :** Master MIOLA — ENSIAS  
+**Étudiant :** Basma Elgharbaoui
 **Encadrant :** Pr. Khalid Nafil  
-**Technologies :** Spring Boot 4.0.6 · PostgreSQL · React 18 · Docker · Ollama (LLaMA3)
+**Technologies :** Spring Boot 4.0.6 · PostgreSQL · React · Docker · Ollama (LLaMA3)
 
 ---
 
