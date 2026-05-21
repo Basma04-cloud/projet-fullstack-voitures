@@ -82,35 +82,9 @@ npm run dev
 
 ---
 
-## 🖥 Méthode 2 — Lancement en local (sans Docker)
+  
 
-### Prérequis
-- Java 21, Maven
-- PostgreSQL installé et démarré
-- Node.js 18+, npm
-- Ollama
-
-```bash
-# 1. Créer la base PostgreSQL
-psql -U postgres -c "CREATE DATABASE springboot;"
-
-# 2. Démarrer Ollama
-ollama pull llama3
-ollama serve
-
-# 3. Lancer le backend
-cd backend
-./mvnw spring-boot:run
-
-# 4. Lancer le frontend (dans un autre terminal)
-cd frontend
-npm install
-npm run dev
-```
-
----
-
-## 🤖 Intégration IA Métier (Ollama + LLaMA3)
+## Intégration IA Métier (Ollama + LLaMA3)
 
 ### Architecture
 
@@ -166,64 +140,13 @@ Content-Type: application/json
 
 ---
 
-## 🧪 Tests
+ 
+ 
 
-### Backend (JUnit 5 + H2 en mémoire)
-```bash
-cd backend
-./mvnw test
-```
-
-### Test API avec curl
-
-```bash
-# Liste toutes les voitures
-curl http://localhost:9090/voitures
-
-# Ajouter une voiture
-curl -X POST http://localhost:9090/voitures \
-  -H "Content-Type: application/json" \
-  -d '{"marque":"Renault","modele":"Clio","couleur":"Blanc","immatricule":"B-5-1234","annee":2020,"prix":80000}'
-
-# Recommandation IA
-curl -X POST http://localhost:9090/ai/recommander \
-  -H "Content-Type: application/json" \
-  -d '{"budget":100000,"usage":"famille"}'
-
-# Fiche IA pour la voiture id=1
-curl http://localhost:9090/ai/description/1
-
-# Chatbot
-curl -X POST http://localhost:9090/ai/chat \
-  -H "Content-Type: application/json" \
-  -d '{"question":"Quelle est votre voiture la moins chère ?"}'
-```
-
-### Recherches Spring Data REST
-
-```bash
-# Voitures par couleur
-curl "http://localhost:9090/api/voitures/search/findByCouleur?couleur=Grise"
-
-# Voitures par marque
-curl "http://localhost:9090/api/voitures/search/findByMarque?marque=Toyota"
-```
-
+ 
 ---
 
-## 🛑 Arrêter les services
-
-```bash
-# Docker
-docker-compose down
-
-# Supprimer aussi les volumes (données)
-docker-compose down -v
-```
-
----
-
-## 📦 Dépendances principales
+## Dépendances principales
 
 ### Backend
 | Dépendance | Version | Rôle |
@@ -248,4 +171,4 @@ docker-compose down -v
 
 ---
 
-*Projet réalisé dans le cadre du Master MIOLA — ENSIAS, sous la direction du Pr. Khalid Nafil.*
+ 
