@@ -37,7 +37,7 @@ projet-fullstack/
 
 ---
 
-##  Méthode 1 — Lancement avec Docker Compose (recommandé)
+ 
 
 ### Prérequis
 - Docker Desktop installé et démarré
