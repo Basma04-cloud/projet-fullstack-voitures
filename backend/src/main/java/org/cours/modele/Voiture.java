@@ -2,15 +2,14 @@ package org.cours.modele;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-
+import lombok.*;
 @Entity
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
 public class Voiture {
 
     @Id

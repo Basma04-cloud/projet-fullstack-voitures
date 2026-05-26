@@ -2,16 +2,16 @@ package org.cours.modele;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 import java.util.List;
+import lombok.*;
 
 @Entity
 @Data
 @RequiredArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Proprietaire {
 
     @Id
